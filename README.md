@@ -3,12 +3,33 @@
 ## 비디오 파일 스트리밍 전송하기  
 - c:/에 ffmpeg 설치 후, 환경변수 설정 path에 c:/ffmpeg/bin을 추가할 것
 - mkv, mp4 파일 스트리밍 테스트 완료  
+- 스트리밍 서버 켜기  
+```
+./rtsp-simple-server
+```
+
+- 스트리밍 서버에 원하는 파일 반복으로 스트리밍 하기  
+```
+ffmpeg -re -stream_loop -1 -i file.ts -c copy -f rtsp rtsp://localhost:8554/mystream
+```
+
+- 스트리밍 되는 영상 보기  
+```
+ffplay rtsp://localhost:8554/mystream
+```
+[참조 링크(github)](https://github.com/aler9/rtsp-simple-server)  
+
+
+- 스트리밍 서버에 원하는 파일 한 번 스트리밍 하기  
 ```
 ffmpeg -re -i d:\source.mkv -c copy -f rtp_mpegts rtp://127.0.0.1:9000
 ```
+
+- 스트리밍 되는 영상 보기  
 ```
 ffplay rtp://127.0.0.1:9000
 ```
+
 
 ## 웹캠 스트리밍 하기  
 - 웹캠 이름 확인하기  
