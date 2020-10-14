@@ -49,6 +49,7 @@ ffplay rtp://127.0.0.1:9000
 - ffmpeg로 rtsp 서버에 스트리밍하기 2  
 ```
 ffmpeg -f dshow -i video="HD Pro Webcam C920" -f rtsp -rtsp_transport tcp rtsp://localhost:8554/visual
+ffmpeg -f dshow -video_size 1920*1080 -i video="HD Pro Webcam C920" -f rtsp -rtsp_transport tcp rtsp://localhost:8554/visual
 ```
 
 - ffplay로 스트리밍 보기 2  
@@ -59,6 +60,7 @@ ffplay rtsp://localhost:8554/visual
 
 
 [참조 링크 1](https://icodebroker.tistory.com/6350)  
-[참조 링크 2](https://realapril.tistory.com/41)  
+[참조 링크 2]https://icodebroker.tistory.com/6351)
+[참조 링크 3](https://realapril.tistory.com/41)  
 [ffmpeg 사용법](https://peche326.tistory.com/58)   
 [유튜브 다운로드](https://mrs0m30n3.github.io/youtube-dl-gui/)  
