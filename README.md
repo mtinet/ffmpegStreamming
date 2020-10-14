@@ -58,7 +58,7 @@ ffplay rtsp://localhost:8554/visual
 ```
 - 브라우저에서 보려면 주소창에 rtsp 주소만 넣으면 됨  
 
-
+[ffmpeg 설명서](https://trac.ffmpeg.org/wiki/EncodingForStreamingSites)  
 [참조 링크 1](https://icodebroker.tistory.com/6350)  
 [참조 링크 2](https://icodebroker.tistory.com/6351)
 [참조 링크 3](https://realapril.tistory.com/41)  
