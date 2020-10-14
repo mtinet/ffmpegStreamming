@@ -32,15 +32,26 @@ ffplay rtp://127.0.0.1:9000
 
 
 ## 웹캠 스트리밍 하기  
-- 웹캠 이름 확인하기  
+- 연결된 웹캠 이름 확인하기  
 ```
 ffmpeg -list_devices true -f dshow -i dummy  
 ```
-- ffmpeg로 rtsp 서버에 스트리밍하기  
+- ffmpeg로 rtsp 서버에 스트리밍하기 1  
+```
+ffmpeg -f dshow -rtbufsize 64M -i "HD Pro Webcam C920" -s 320x200 -f rtp_mpegts rtp://127.0.0.1:9000
+```
+
+- ffplay로 스트리밍 보기 1  
+```
+ffplay rtp://127.0.0.1:9000
+```
+
+- ffmpeg로 rtsp 서버에 스트리밍하기 2  
 ```
 ffmpeg -maxrate 800k -bufsize 3000k -f dshow -i video="HD Pro Webcam C920" -f rtsp -rtsp_transport tcp rtsp://localhost:8554/visual
 ```
-- ffplay로 스트리밍 보기  
+
+- ffplay로 스트리밍 보기 2  
 ```
 ffplay rtsp://localhost:8554/visual
 ```
