@@ -28,3 +28,4 @@ ffplay rtsp://localhost:8554/visual
 
 [참조 링크 1](https://icodebroker.tistory.com/6350)  
 [참조 링크 2](https://realapril.tistory.com/41)  
+[ffmpeg 사용법](https://peche326.tistory.com/58)   
